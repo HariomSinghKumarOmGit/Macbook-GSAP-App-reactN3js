@@ -4,6 +4,7 @@ import clsx from "clsx";
 import {Canvas} from "@react-three/fiber";
 import {Box, OrbitControls} from "@react-three/drei";
 import MacbookModel14 from "./models/Macbook-14.jsx";
+import StudioLights from "./models/StudioLights.jsx";
 
 const ProductViewer = () => {
     const {color, scale, setColor, setScale } = useMacbookStore();
@@ -54,11 +55,12 @@ const ProductViewer = () => {
             {/*<Box position={[0, 0, 0]} scale={10*scale} material-color={color} />*/}
             {/*<ambientLight intensity={7}  position={[-1,2,-2]} />*/}
             {/*<spotLight intensity={0.7} position={[-1,2,1]} />*/}
+            {/*<directionalLight position={[5, 5, 5]} intensity={1.2} />*/}
             <ambientLight intensity={0.7}  position={[1,1,1]} />
-
+            <StudioLights/>
             <MacbookModel14 scale={0.06} position={[0,0,0]}/>
 
-            <OrbitControls enableZoom={true}  />
+            <OrbitControls enableZoom={false}  />
         </Canvas>
 
 
