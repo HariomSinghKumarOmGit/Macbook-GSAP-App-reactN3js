@@ -1,5 +1,6 @@
 import React from 'react';
-import {navLinks} from "../constants ";
+import {navLinks} from "../constants/index.js";
+
 
 const NavBar = () => {
   return (
